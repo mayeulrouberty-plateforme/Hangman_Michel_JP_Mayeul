@@ -1,7 +1,10 @@
 import random
 import pygame
 import sys
+import os
 
+dossier_script = os.path.dirname(__file__)
+chemim_image = os.path.join(dossier_script, "westernMichel.png")
 
 LARGEUR=800
 HAUTEUR=600
@@ -11,7 +14,6 @@ BLANC=(255, 255, 255)
 GRIS = (200, 200, 200)
 BLEU = (50, 50, 150)
 ROUGE = (255, 0, 0)
-
 
 
 def choisir_niveau(niveau):
@@ -59,7 +61,17 @@ affichage_liste=["_"] * len(mot_a_deviner)
 tentatives=7
 jeu_termine=False
 message_fin=""
-
+temps_total_ms = 10000 
+start_ticks = pygame.time.get_ticks() # On lance le chrono maintenant
+score = 0
+temps_restant_ms = temps_total_ms
+try:
+    image_fond = pygame.image.load("westernMichel.png")
+    # On force l'image à faire la taille exacte de la fenêtre (800x600)
+    image_fond = pygame.transform.scale(image_fond, (LARGEUR, HAUTEUR))
+except FileNotFoundError:
+    print("Attention : Image de fond introuvable. On restera sur du blanc.")
+    image_fond = None
 # Lettre choisie par l'utilisateur
 lettre_tampon=""
 print(f"TRICHE (pour tester) : Le mot est {mot_a_deviner}") # Pour voir si ça marche dans la console
@@ -85,6 +97,18 @@ for i in range(8): # range(8) va de 0 à 7
 # --- 5. BOUCLE PRINCIPALE ---
 running = True
 while running:
+    if not jeu_termine:
+        # Temps écoulé depuis le début = Maintenant - Départ
+        temps_ecoule = pygame.time.get_ticks() - start_ticks
+        
+        # Temps restant = 10s - Temps écoulé
+        temps_restant_ms = temps_total_ms - temps_ecoule
+        
+        # Si le temps est écoulé (inférieur à 0)
+        if temps_restant_ms <= 0:
+            temps_restant_ms = 0 # On bloque à 0 pour pas afficher des nombres négatifs
+            jeu_termine = True
+            message_fin = f"TEMPS ÉCOULÉ ! Le mot était {mot_a_deviner}"
     # A. Événements
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
@@ -120,7 +144,9 @@ while running:
                     # Victoire (si plus aucun "_" n'est présent)
                     if "_" not in affichage_liste:
                         jeu_termine = True
-                        message_fin = "BRAVO ! C'EST GAGNE !"
+                        # LE SCORE EST EGAL AU TEMPS RESTANT (en points)
+                        score = temps_restant_ms
+                        message_fin = f"GAGNÉ ! Score : {score} pts"
                     
                     # Défaite (Attention au simple '=' ici, pas '==')
                     if tentatives == 0:
@@ -132,7 +158,14 @@ while running:
                     lettre_tampon = ""
 
     # B. Dessin
-    ecran.fill(BLANC)
+    if image_fond: # Si l'image existe
+        ecran.blit(image_fond, (0, 0)) # On la colle en haut à gauche
+    else:
+        ecran.fill(BLANC) # Sinon, on garde le fond blanc classique
+    
+    # ... ENSUITE tout le reste de ton code (les rectangles, le texte, etc.) ...
+    # pygame.Rect (x, y, largeur, hauteur)
+    zone_haut = pygame.Rect(0, 0, LARGEUR, 150)
     # pygame.Rect (x, y, largeur, hauteur)
     zone_haut = pygame.Rect(0, 0, LARGEUR, 150)
     # "Dessine un rectangle" (Sur quoi, couleur, où et quelle taile de la variable zone_haut, on fait un contour et il est d'épaisseur 2)
@@ -168,15 +201,21 @@ while running:
 
 
     # Rectangle temps haut droite
-    zone_droite= pygame.Rect(400, 150, LARGEUR//2, 120)
+    zone_droite = pygame.Rect(400, 150, LARGEUR//2, 120)
     pygame.draw.rect(ecran, ROUGE, zone_droite, 2)
 
-    texte_timer = "Temps : 60" 
+    # --- CALCUL DE L'AFFICHAGE (Secondes : Centièmes) ---
+    secondes = temps_restant_ms // 1000
+    centiemes = (temps_restant_ms % 1000) // 10
+    
+    # Le format f"{...:02}" force l'affichage sur 2 chiffres (ex: 05 au lieu de 5)
+    texte_timer = f"Temps : {secondes}:{centiemes:02}" 
+    
     image_timer = police.render(texte_timer, True, NOIR)
        
-    # 4. Positionnement (Au centre de la zone bleue)
+    # Positionnement
     rect_timer = image_timer.get_rect(center=zone_droite.center)
-    ecran.blit(image_timer, rect_timer)    
+    ecran.blit(image_timer, rect_timer)   
 
 
     # Rectangle Pendu bas gauche
