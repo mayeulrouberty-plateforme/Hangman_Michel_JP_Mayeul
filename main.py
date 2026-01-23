@@ -1,16 +1,34 @@
-from config import init_pygame, charger_fonts, charger_images_pendu, charger_background, init_musique
+from config import (
+    initialiser_pygame,
+    charger_polices,
+    charger_images_pendu,
+    charger_arriere_plan,
+    initialiser_musique,
+    charger_sons,
+)
 from game_logic import PartiePendu
 from screens import menu_principal
 
 
 def main():
-    fenetre, clock = init_pygame()
-    fonts = charger_fonts()
+    fenetre, horloge = initialiser_pygame()
+    polices = charger_polices()
     images_pendu = charger_images_pendu()
-    bg = charger_background()
-    init_musique()
+    arriere_plan = charger_arriere_plan()
 
-    menu_principal(fenetre, clock, bg, fonts, images_pendu, PartiePendu)
+    initialiser_musique()
+    son_clavier, son_corbeau = charger_sons()
+
+    menu_principal(
+        fenetre,
+        horloge,
+        arriere_plan,
+        polices,
+        images_pendu,
+        PartiePendu,
+        son_clavier,
+        son_corbeau,
+    )
 
 
 if __name__ == "__main__":

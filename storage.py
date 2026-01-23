@@ -1,16 +1,19 @@
 import os
-from config import MOTS_FILE, SCORES_FILE
+from config import FICHIER_MOTS, FICHIER_SCORES
 
 
 def charger_mots():
-    mots = []
-    if not os.path.exists(MOTS_FILE):
+    """Charge les mots depuis le fichier, renvoie au moins ['PENDU']."""
+    if not os.path.exists(FICHIER_MOTS):
         return ["PENDU"]
-    with open(MOTS_FILE, "r", encoding="utf-8") as f:
+
+    mots = []
+    with open(FICHIER_MOTS, "r", encoding="utf-8") as f:
         for ligne in f:
             mot = ligne.strip().upper()
             if mot:
                 mots.append(mot)
+
     return mots or ["PENDU"]
 
 
@@ -18,29 +21,33 @@ def ajouter_mot(mot):
     mot = mot.strip().upper()
     if not mot:
         return
-    with open(MOTS_FILE, "a", encoding="utf-8") as f:
+    with open(FICHIER_MOTS, "a", encoding="utf-8") as f:
         f.write(mot + "\n")
 
 
 def sauver_score(nom, score):
     nom = (nom or "ANONYME").strip()
-    with open(SCORES_FILE, "a", encoding="utf-8") as f:
+    with open(FICHIER_SCORES, "a", encoding="utf-8") as f:
         f.write(f"{nom};{score}\n")
 
 
 def charger_scores():
+    """Renvoie la liste [(nom, score)] triée du plus grand au plus petit."""
     scores = []
-    if not os.path.exists(SCORES_FILE):
+    if not os.path.exists(FICHIER_SCORES):
         return scores
-    with open(SCORES_FILE, "r", encoding="utf-8") as f:
+
+    with open(FICHIER_SCORES, "r", encoding="utf-8") as f:
         for ligne in f:
             ligne = ligne.strip()
-            if ";" in ligne:
-                nom, sc = ligne.split(";", 1)
-                try:
-                    scores.append((nom, int(sc)))
-                except ValueError:
-                    pass
+            if ";" not in ligne:
+                continue
+            nom, sc = ligne.split(";", 1)
+            try:
+                scores.append((nom, int(sc)))
+            except ValueError:
+                continue
+
     scores.sort(key=lambda x: x[1], reverse=True)
     return scores
 
