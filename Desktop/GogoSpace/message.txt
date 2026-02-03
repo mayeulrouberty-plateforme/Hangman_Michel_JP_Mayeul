@@ -1,0 +1,143 @@
+Be a NewSpace Player #Space4.0
+ADS #2 - Reinforce the autonomy of Airbus satellites - by AIRBUS
+Identifing innovative and impactful AI applications that can be hosted onboard CO3D satellites.
+# DataPlatform
+# AI
+# SatelliteSystem
+CNES #4 - Harnessing the Sun, Empowering the Stars - by CNES
+Picture a satellite outfitted with large solar panels that harness the sun's energy, transforming it into a powerful source of electricity to function as a central power hub in space, providing essential energy to orbiting satellites.
+# SpacePower
+# WirelessEnergy
+# SpaceLogistics
+CNES #7 - Clean the Cosmos : Secure and Sustainable Space Operations - by CNES
+Space debris include defunct satellites, spent rocket stages, and fragments from disintegration, erosion, and collisions. These objects, traveling at high velocities in orbit, pose significant risks to satellites, space missions and overall for the space environment. The accumulation of debris increases the likelihood of collisions, which can create more debris in a cascading effect.
+# SpaceTech
+# AI
+# OrbitalDebris
+CNES #8 - Space Beyond Boundaries : Private Stations for a New Age - by CNES
+Creating private space stations, including unmanned micro-stations, is an ambitious and complex endeavor. It is essential to consider the significant financial costs associated with developing and maintaining such stations. Additionally, addressing technological barriers and ensuring safety are paramount. Comprehensive planning is critical to the success of these projects.
+# SpaceCommerce
+# SpaceInvestment
+# SpaceInfrastructure
+TAS #1 - Space Data, Trust & Value - by THALES ALENIA SPACE
+Rethinking the economy of satellite data in a fragmented digital ecosystem
+# DataManagement
+# CyberSecurity
+# SpaceCommerce
+TAS #3 - Future of Edge Computing in Space - by THALES ALENIA SPACE
+Exploring the potential of orbital data centers and edge computing for next-gen satellite networks
+# AI
+# DataManagement
+# SpaceInfrastructure
+TAS #4 - Design a Modular & Composable Satellite - by THALES ALENIA SPACE
+Miniaturization and plug & play architectures for adaptive space infrastructures
+# SpaceManufacturing
+# Robotics
+# SpaceInfrastructure
+Everyday Life Business
+ADS #4 - Improve mass production capabilities for Airbus satellites - by AIRBUS
+Revolutionizing the production of satellites using technology leverages cutting-edge robotics, artificial intelligence (AI), and additive manufacturing (3D printing) to create a highly efficient, scalable, and sustainable satellite production process.
+# Iot
+# Environment
+# SpaceLogistics
+# Engineering
+ADS #5 - Develop defence in space and defence from space with Airbus - by AIRBUS
+Developing new capabilities for defence from space and self-defence in space, leveraging advanced technologies to enhance the resilience and sustainability of future aerospace and defense systems. The goal is to create innovative solutions that ensure the protection of space assets and the ability to respond to threats efficiently.
+# Security
+# SpaceTech
+# SatelliteSystem
+ADS #6 - Protect Airbus space assets from cyber threats - by AIRBUS
+Developing advanced data protection mechanisms and systems capable of withstanding sophisticated cyberattacks. The goal is to create solutions that guarantee the confidentiality, integrity, and continuous availability of data, essential for various technological applications.
+# Security
+# SatelliteSystem
+# Engineering
+# IT
+Fly to moon and beyond
+ADS #1 - Maximize Starlab space station innovation potential - by AIRBUS
+Identifing new technologies and collaborating with strategic partners to co-develop innovative solutions and applications that maximize the potential of Starlab commercial space station.
+# SpaceTech
+# SpaceLogistics
+# SpaceInfrastructure
+CNES #1 - Deploying Hope : Versatile Solutions for Earth and Beyond - by CNES
+Envision a pioneering initiative to develop advanced deployable antennas that can seamlessly unfold and adapt to various environments. These antennas are designed for versatility and resilience, making them indispensable in a wide range of scenarios.
+# SpaceTech
+# Telecom
+# DisasterResponse
+CNES #3 - Redefining Frontiers : Self-Sustained Space Pioneers - by CNES
+Imagine embarking on a mission to establish self-sustaining bases on the Moon and Mars, utilizing local resources and resource recycling to the greatest extent possible.
+# SpaceExploration
+# Robotics
+# RenewableEnergy
+CNES #9 - Pioneering new frontiers, one step at a time - by CNES
+Long-duration space travels, such as the journey to Mars requiring astronauts to endure a six-month voyage through the radiation-filled void of space, and extended missions aboard space stations designed to serve as sustainable habitats, research laboratories, and potential gateways for deep space exploration, represent humanity's most challenging yet promising frontiers.
+# WellBeing
+# Sustainability
+# SpaceManufacturing
+Space for Earth & Humanity
+ACRI ST #1 - EO at the service of natural resource management - by ACRI ST
+Through the Sentinel-2 Global Mosaic service, use multispectral imagery to design commercial use cases aligned with principles of sustainable management
+# RemoteSensing
+# Sustainability
+# DataManagement
+ADS #3 - Fight for our Planet with Airbus Earth Observation data - by AIRBUS
+Leveraging extensive and fresh satellite imagery to create groundbreaking services that meet various needs with premium reactivity
+# Agriculture
+# Environment
+# Maritime
+# Energy
+# Security
+CNES #10 - Guardians of the Orbit : Protecting Our Space, Securing Our Future - by CNES
+Securing and regulating Low Earth Orbit (LEO) is a complex task. International bodies like the United Nations Office for Outer Space Affairs (UNOOSA) can play a key role in coordinating efforts and ensuring compliance
+# TrafficManagement
+# Sustainability
+# Security
+CNES #11 - No More Dead Zones - by CNES
+Building Resilient, Next-Generation B2C Solutions with LEO Constellations
+# Environment
+# DataPlatform
+# PublicHealth
+CNES #12 - Higher, faster, greenerCan the space boom be sustainable? - by CNES
+In 2025, the space industry is operating at a fever pitch. Driven by the rise of new private players and a growing reliance on satellites for communication, observation, and navigation, launch rates are reaching all-time highs. This momentum is further fueled by bold exploration goals, including lunar outposts and missions to Mars.
+# GreenEnergy
+# Sustainability
+# Reusability
+CNES #13 - Orchestrating the orbital ballet - by CNES
+Space is evolving into a truly dynamic and complex network, already rivaling Earth’s air traffic. Thousands of satellites are in orbit; space trains will soon link orbital bases, and reusable launchers will traverse the vacuum of space in a coordinated ballet. Lunar and Martian bases will rely on constant supply chains, while orbital stations host a steady flow of passengers, cargo, and scientific resources. The sheer complexity of these operations has surpassed what humans can manage alone
+# SpaceForEarth
+# AI
+# Autonomous
+CNES #2 - Celestial Sentinels : Satellite Data for a Resilient Planet - by CNES
+Imagine an innovative initiative harnessing the power of satellite imagery to monitor and track the progression and spread of diseases on Earth. This project would leverage high-resolution satellite data to observe how diseases evolve, impact populations, and interact with various environmental factors to understand the conditions that contribute to disease proliferation, including climate, population density, vegetation, and other variables.
+# RemoteSensing
+# PublicHealth
+# AI
+CNES #5 - Stellar Library : Your Source for Celestial Information - by CNES
+Imagine a satellite or space station that functions as a celestial data hub, receiving and storing information transmitted by Earth stations and other satellites. This vast repository of knowledge would include real-time data, Earth's weather patterns, satellite locations, ground temperatures… the list is almost limitless.
+# DataManagement
+# CyberSecurity
+# Software
+CNES #6 - Green space : Protecting forests from above - by CNES
+Despite increased global awareness, deforestation continues at an alarming rate, with approximately 4.7 million hectares of forests lost annually between 2010 and 2020, according to the UN Food and Agriculture Organization. The most recent satellite data reveals that primary forest loss in the tropics increased by 12% in 2020 compared to 2019, releasing carbon equivalent to the annual emissions of 570 million cars.
+# AI
+# SatelliteMonitoring
+# SustainableForestry
+ESA #1 - DYNAMIC FIELDS: AI-DRIVEN VEGETATION MONITORING - by ESA
+Monitoring Earth's vegetation is critical for food security and ecosystem health. While open-source data from satellites like Sentinel (radar/optical) is abundant, it is complex to translate into simple, actionable products. Using this data, both by themselves and combining in a multi-modal fashion, can lead to reliable and valuable results.
+# Sustainability
+# AI
+# RemoteSensing
+ESA #2 - Height & Seek - by ESA
+Seeking potential applications for an altimetry system capable of improving ocean height measurement precision by approximately 50% over existing technologies
+# Sustainability
+# RemoteSensing
+# SatelliteMonitoring
+SPACE LOCKER #SPECIAL PRIZE - Earth or Space ObservationHosted Payload - by SPACE LOCKER
+Fast, affordable and sustainable access to orbit. SpaceLocker is a secondary hosted payload service company enabling in-orbit demonstrations and data-generation missions through shared satellite missions.
+# NewSpacePlayer
+# SpaceForEarth
+# Payload
+TAS #2 - Circularity and Sustainability - by THALES ALENIA SPACE
+Redesigning space systems for a resilient and regenerative future
+# Sustainability
+#
+# SpaceManufacturing

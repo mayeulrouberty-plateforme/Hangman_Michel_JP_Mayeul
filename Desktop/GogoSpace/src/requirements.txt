@@ -1,0 +1,27 @@
+# Cosmic Query Agent - Requirements
+# ActInSpace Hackathon 2025
+
+# Web Interface
+streamlit>=1.31.0
+
+# Astronomical Data
+astroquery>=0.4.7
+astropy>=6.0.0
+
+# LLM Integration
+openai>=1.12.0
+python-dotenv>=1.0.0
+
+# Data Processing
+pandas>=2.2.0
+numpy>=1.26.0
+
+# Visualization
+plotly>=5.18.0
+
+# Utilities
+requests>=2.31.0
+
+# Space Traffic Management (STM)
+skyfield>=1.46
+sgp4>=2.23

@@ -1,0 +1,210 @@
+# ============================================================
+# COSMIC QUERY AGENT - PROJECT TRACKER
+# Agent de suivi des modifications
+# ============================================================
+# Generé: 2026-01-31
+# Version: 1.0.0
+# ============================================================
+
+project:
+  name: "Cosmic Query Agent"
+  version: "2.1.0"
+  status: "MVP Fonctionnel"
+  hackathon: "ActInSpace 2025"
+
+# ============================================================
+# CONFIGURATION DE L'AGENT DE SUIVI
+# ============================================================
+
+tracker_config:
+  # Mode de verbosité pour les annonces TTS
+  verbosity: "medium"  # low | medium | high
+
+  # Langue principale
+  language: "french"
+
+  # Notifications vocales activées
+  voice_enabled: true
+  voice_personality: "professional"
+
+  # Fréquence de rapport
+  report_frequency: "on_change"  # on_change | hourly | daily
+
+  # Seuils d'alerte
+  alerts:
+    critical_issues: true
+    test_failures: true
+    security_warnings: true
+    performance_degradation: true
+
+# ============================================================
+# MÉTRIQUES DU PROJET (Baseline de l'audit)
+# ============================================================
+
+baseline_metrics:
+  timestamp: "2026-01-31T00:00:00Z"
+
+  code:
+    total_loc: 5099
+    modules: 11
+    functions: 117
+
+  quality:
+    test_coverage: 0  # % (à implémenter)
+    type_hints_coverage: 50  # % estimé
+    docstring_coverage: 70  # % estimé
+
+  debt:
+    score: 6.2  # /10 (6.2 = modérée-élevée)
+    print_statements: 113
+    bare_except: 4
+
+  security:
+    env_in_git: false  # à corriger
+    credentials_hardcoded: false
+    dependencies_audited: false
+
+# ============================================================
+# TÂCHES PRIORITAIRES (Issues de l'audit)
+# ============================================================
+
+priority_tasks:
+  critical:
+    - id: "CRIT-001"
+      title: "Ajouter tests unitaires"
+      status: "pending"
+      effort: "40-60h"
+      assignee: null
+
+    - id: "CRIT-002"
+      title: "Implémenter logging centralisé"
+      status: "pending"
+      effort: "10-15h"
+      assignee: null
+
+    - id: "CRIT-003"
+      title: "Améliorer gestion d'erreurs"
+      status: "pending"
+      effort: "15-20h"
+      assignee: null
+
+    - id: "CRIT-004"
+      title: "Refactoriser app.py (1696 LOC)"
+      status: "pending"
+      effort: "30-40h"
+      assignee: null
+
+  important:
+    - id: "IMP-001"
+      title: "Setup CI/CD GitHub Actions"
+      status: "pending"
+      effort: "10-15h"
+
+    - id: "IMP-002"
+      title: "Compléter type hints"
+      status: "pending"
+      effort: "10-15h"
+
+    - id: "IMP-003"
+      title: "Documentation CONTRIBUTING.md"
+      status: "pending"
+      effort: "15-20h"
+
+  from_claude_md:
+    - id: "FEAT-001"
+      title: "Améliorer affichage interprétations LLM"
+      status: "in_progress"
+      priority: 1
+      notes: "Visualisation Aladin Lite améliorée terminée"
+
+    - id: "FEAT-002"
+      title: "Ajouter filtres avancés (magnitude, parallaxe)"
+      status: "pending"
+      priority: 2
+
+    - id: "FEAT-003"
+      title: "Export PDF des analyses"
+      status: "pending"
+      priority: 3
+
+    - id: "FEAT-004"
+      title: "Tests unitaires"
+      status: "pending"
+      priority: 4
+
+# ============================================================
+# CHANGELOG - Historique des modifications
+# ============================================================
+
+changelog:
+  - version: "2.2.0"
+    date: "2026-01-31"
+    changes:
+      - "Nouvelle fonction render_aladin_anomalies() avec visualisation interactive"
+      - "Code couleur par type d'anomalie (photometrique, astrometrique, couleur, missing)"
+      - "Marqueurs differencies par severite (high, medium, low)"
+      - "Popups cliquables avec details complets des anomalies"
+      - "Panneau de legende interactif avec filtres"
+      - "Overlays pour sources haute priorite (score >= 50)"
+      - "Barre de statistiques en temps reel"
+      - "Integration dans render_anomaly_dashboard()"
+
+  - version: "2.1.0"
+    date: "2026-01-26"
+    changes:
+      - "Ajout module Launch Risk Assessment"
+      - "Intégration Globe 3D CesiumJS"
+      - "Client Space-Track.org avec caching"
+      - "Fix: SIMBAD colonnes lowercase"
+      - "Fix: LLM response.content None check"
+      - "Fix: NaN handling source_id"
+
+  - version: "2.0.0"
+    date: "2026-01-25"
+    changes:
+      - "Module STM (Space Traffic Management)"
+      - "Visualisation Cesium"
+      - "Propagation orbite SGP4/Skyfield"
+
+  - version: "1.0.0"
+    date: "2026-01-24"
+    changes:
+      - "MVP Cosmic Queries"
+      - "Cross-match VizieR (Gaia, 2MASS, SDSS)"
+      - "Détection d'anomalies"
+      - "Intégration LLM"
+
+# ============================================================
+# SESSION DE TRAVAIL ACTIVE
+# ============================================================
+
+current_session:
+  started: null
+  focus: null
+  completed_tasks: []
+  in_progress: []
+  notes: []
+
+# ============================================================
+# RÈGLES DE SUIVI
+# ============================================================
+
+tracking_rules:
+  # Avant chaque modification
+  pre_change:
+    - "Vérifier que la tâche est dans priority_tasks"
+    - "Marquer la tâche comme in_progress"
+    - "Annoncer le début du travail (TTS si activé)"
+
+  # Après chaque modification
+  post_change:
+    - "Mettre à jour le status de la tâche"
+    - "Ajouter une entrée dans current_session.completed_tasks"
+    - "Mettre à jour les métriques si applicable"
+    - "Annoncer la complétion (TTS si activé)"
+
+  # À chaque commit (quand git sera initialisé)
+  on_commit:
+    - "Vérifier que le changelog est à jour"
+    - "Incrémenter la version si nécessaire"
+    - "Générer un résumé des changements"
